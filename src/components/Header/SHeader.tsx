@@ -1,7 +1,7 @@
 import { styled } from 'shared'
 import { SCREEN } from 'constant'
 
-export const SHeader = styled.header`
+export const SHeader = styled.header<{ isOpen: boolean }>`
   @media (min-width: ${SCREEN.MOBILE}px) {
     height: 4rem;
     max-width: 122rem;
@@ -19,10 +19,8 @@ export const SHeader = styled.header`
       z-index: 21;
       right: 1rem;
       top: 1rem;
+      transform: rotate(${({ isOpen }) => (isOpen ? '65deg' : 0)});
       transition: transform 0.4s ${({ theme }) => theme?.transition};
-      &:hover {
-        transform: rotate(65deg);
-      }
 
       > svg {
         width: 4rem;
