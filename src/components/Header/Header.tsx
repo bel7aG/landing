@@ -11,11 +11,19 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = () => {
   const [isOpen, setOpen] = useState<boolean>(false)
+  const [disabled, setDisabled] = useState<boolean>(false)
 
   const { width } = useWindowSize()
 
   const handleCarpet = (open: boolean) => {
     setOpen(open)
+    setDisabled(true)
+    setTimeout(
+      () => {
+        setDisabled(false)
+      },
+      open ? 1000 : 1500
+    )
   }
 
   useEffect(() => {
@@ -26,7 +34,7 @@ const Header: FC<HeaderProps> = () => {
 
   return (
     <SHeader>
-      <button onClick={() => handleCarpet(!isOpen)}>
+      <button disabled={disabled} onClick={() => handleCarpet(!isOpen)}>
         <CarpetSVG />
       </button>
       <Navigation handleClose={handleCarpet} isOpen={isOpen} items={NAV_ITEMS} />
