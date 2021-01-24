@@ -99,14 +99,6 @@ export const SHome = styled.div`
             object-fit: cover;
           }
 
-          > h1 {
-            z-index: 10;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-
           &::before,
           > img,
           > a {
