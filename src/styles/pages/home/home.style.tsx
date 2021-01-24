@@ -1,4 +1,5 @@
 import { styled } from 'shared'
+import { SCREEN } from 'constant'
 
 export const SHome = styled.div`
   > div:first-child {
@@ -14,10 +15,10 @@ export const SHome = styled.div`
     margin: 0 auto;
     padding: 4rem 1rem 0;
     > h1,
-    h2,
-    h3,
-    p {
-      max-width: 61rem;
+    > h2,
+    > h3,
+    > p {
+      max-width: 68rem;
       margin: 0 auto;
       &:not(:last-child) {
         margin-bottom: 2rem;
@@ -27,11 +28,6 @@ export const SHome = styled.div`
   }
 
   > div:nth-child(2) {
-    > h1 {
-      font-size: 3.4rem;
-      font-weight: 700;
-    }
-
     > *:not(h1) {
       color: ${({ theme }) => theme?.layout?.colors?.textSecondary};
     }
@@ -39,7 +35,7 @@ export const SHome = styled.div`
 
   > div:last-child {
     > h2 {
-      font-weight: 400;
+      font-weight: 500;
       font-size: 2.2rem;
     }
     > div {
@@ -52,7 +48,6 @@ export const SHome = styled.div`
 
         > div {
           position: relative;
-          max-height: 38rem;
           overflow: hidden;
 
           &::before,
@@ -75,11 +70,26 @@ export const SHome = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 0 auto;
             > span {
-              font-weight: 500;
-              font-size: 3.2rem;
+              font-weight: 700;
               color: #e89b99;
               text-align: center;
+              max-width: 85%;
+              margin: 0 auto;
+              line-height: 3rem;
+
+              @media screen and (min-width: ${SCREEN.DESKTOP}px) {
+                font-size: 3.2rem;
+              }
+
+              @media screen and (max-width: ${SCREEN.DESKTOP}px) {
+                font-size: 2.6rem;
+              }
+
+              @media screen and (max-width: ${SCREEN.MOBILE}px) {
+                font-size: 1.4rem;
+              }
             }
           }
 
@@ -117,16 +127,36 @@ export const SHome = styled.div`
 
         &:first-child {
           margin-bottom: 3rem;
-          > div:first-child {
-            width: calc(65% - 1.5rem);
+        }
+
+        @media screen and (min-width: ${SCREEN.MOBILE}px) {
+          > div {
+            height: 38rem;
           }
-          > div:last-child {
-            width: calc(35% - 1.5rem);
+
+          &:first-child {
+            > div:first-child {
+              width: calc(65% - 1.5rem);
+            }
+
+            > div:last-child {
+              width: calc(35% - 1.5rem);
+            }
+          }
+
+          &:last-child {
+            > div {
+              width: calc(50% - 1rem);
+            }
           }
         }
-        &:last-child {
+        @media screen and (max-width: ${SCREEN.MOBILE}px) {
           > div {
-            width: calc(50% - 1rem);
+            height: 19rem;
+          }
+
+          > div {
+            width: 49%;
           }
         }
       }

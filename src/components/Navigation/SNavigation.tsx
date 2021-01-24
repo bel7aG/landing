@@ -6,6 +6,7 @@ export const SNavigation = styled.nav`
   }
   position: relative;
   height: 4rem;
+
   > ul {
     display: flex;
     justify-content: space-between;
@@ -14,9 +15,11 @@ export const SNavigation = styled.nav`
 
     > li {
       > a {
+        font-weight: 400;
         color: ${({ theme }) => theme?.layout?.colors?.text};
         text-transform: uppercase;
       }
+
       &:last-child {
         > a {
           color: ${({ theme }) => theme?.layout?.colors?.textSecondary};

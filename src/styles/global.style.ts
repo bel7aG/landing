@@ -3,8 +3,9 @@ import { SCREEN } from 'constant'
 
 export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
   * {
-    transition: background-color 0.2s, color 0.2s, padding 0.46s ease;
+    transition: all .1s ease;
   }
+
   *,
   *:before,
   *:after {
@@ -22,7 +23,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
   }
 
 
-  h1, h2, h3, h4, h5, h6, p, strong, small {
+  h1, h2, h3, h4, h5, h6, p, li, span, strong, small {
     color: ${({ theme }) => theme?.layout?.colors?.text};
   }
 
@@ -32,14 +33,14 @@ export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
+
   body, html {
     overflow-x: hidden;
   }
 
   body {
     background-color: ${({ theme }) => theme?.layout?.colors?.body};
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     height: 100vh !important;
     font-size: 1.6rem;
@@ -61,9 +62,21 @@ export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
     list-style: none;
   }
 
+  h1, h2 {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
   @media screen and (min-width: ${SCREEN.MOBILE}px) {
     h1 {
-      font-size: 1.9rem;
+      font-size: 2.8rem;
     }
 
     h2 {
@@ -71,7 +84,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
     }
 
     h3 {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     p {
@@ -95,18 +108,6 @@ export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
     p {
       font-size: 1.3rem;
     }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  li,
-  span
-  p {
-    color: ${({ theme }) => theme?.layout?.colors?.text};
   }
 
   a,

@@ -32,6 +32,12 @@ export default class BenutaSite extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap"
+            rel="stylesheet"
+          />
+
           <link type="image/x-icon" rel="shortcut icon" href={FAV_ICON} />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="msapplication-config" content="/static/favicon/browserconfig.xml" />

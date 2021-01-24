@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         </div>
 
         <div>
-          <h2>Jetzt schon stöbern</h2>
+          <h2>Jetzt schon stöbern:</h2>
           <div>
             <div>
               <div id="neuheiten">
