@@ -49,9 +49,7 @@ export const SNavigation = styled.nav<NavigationProps>`
       }
 
       &:last-child {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-left: 2rem;
         border-left: 1px solid #eee;
 
         > a {
@@ -93,6 +91,11 @@ export const SNavigation = styled.nav<NavigationProps>`
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:last-child {
+          padding-left: 0;
+          border-left: none;
+        }
         > a {
           font-weight: 700;
           font-size: 2rem;
