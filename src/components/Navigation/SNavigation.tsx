@@ -40,7 +40,6 @@ export const SNavigation = styled.nav<NavigationProps>`
     align-items: center;
 
     > li {
-      flex: 1;
       line-height: 2.1rem;
 
       > a {
