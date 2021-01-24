@@ -33,7 +33,7 @@ const Header: FC<HeaderProps> = () => {
   }, [width <= 768])
 
   return (
-    <SHeader>
+    <SHeader isOpen={isOpen}>
       <button disabled={disabled} onClick={() => handleCarpet(!isOpen)}>
         <CarpetSVG />
       </button>
