@@ -48,6 +48,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
   }
 
   button {
+    cursor: pointer;
     background-color: transparent;
     outline: none;
     border: 0;
@@ -76,37 +77,37 @@ export const GlobalStyle = createGlobalStyle<{ theme: BenutaTheme }>`
 
   @media screen and (min-width: ${SCREEN.MOBILE}px) {
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.8rem !important;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 2.2rem !important;
     }
 
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.4rem !important;
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.5rem !important;
     }
   }
 
   @media screen and (max-width: ${SCREEN.MOBILE}px) {
     h1 {
-      font-size: 1.7rem;
+      font-size: 2rem !important;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.5rem !important;
     }
 
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.4rem !important;
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.3rem !important;
     }
   }
 

@@ -1,8 +1,7 @@
 import { useRef, memo, FC, ReactNode, RefObject } from 'react'
 
-import { Page, Header, Navigation, Cover } from 'components'
+import { Page, Header, Cover } from 'components'
 import { BenutaLogo } from 'public/static'
-import { NAV_ITEMS } from 'constant'
 import { SLayout } from './SLayout'
 
 export interface LayoutProps {
@@ -16,9 +15,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <>
       <Cover logo={BenutaLogo} />
       <SLayout ref={layoutRef}>
-        <Header>
-          <Navigation items={NAV_ITEMS} />
-        </Header>
+        <Header />
         <Page>{children}</Page>
       </SLayout>
     </>
