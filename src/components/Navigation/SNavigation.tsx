@@ -5,9 +5,6 @@ import { NavigationProps } from './Navigation'
 export const SNavigation = styled.nav<NavigationProps>`
   position: relative;
 
-  @media (max-width: ${SCREEN.MOBILE}px) {
-  }
-
   @media (min-width: ${SCREEN.DESKTOP}px) {
     > ul > li > a {
       font-size: 1.3rem;
@@ -44,6 +41,8 @@ export const SNavigation = styled.nav<NavigationProps>`
 
     > li {
       flex: 1;
+      line-height: 2.1rem;
+
       > a {
         font-weight: 400;
         color: ${({ theme }) => theme?.layout?.colors?.text};
@@ -51,12 +50,18 @@ export const SNavigation = styled.nav<NavigationProps>`
       }
 
       &:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #eee;
+
         > a {
           color: ${({ theme }) => theme?.layout?.colors?.textSecondary};
         }
       }
 
       &:not(:last-child) {
+        margin-right: 2rem;
         > a {
           transition: color 0.2s ${({ theme }) => theme?.transition};
           &:hover {
