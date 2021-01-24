@@ -61,7 +61,9 @@ export const SNavigation = styled.nav<NavigationProps>`
       }
 
       &:not(:last-child) {
-        margin-right: 2rem;
+        @media (min-width: ${SCREEN.TABLET}px) {
+          margin-right: 2rem;
+        }
         > a {
           transition: color 0.2s ${({ theme }) => theme?.transition};
           &:hover {
