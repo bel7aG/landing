@@ -16,7 +16,7 @@ export const SHeader = styled.header`
   @media (max-width: ${SCREEN.MOBILE}px) {
     > button {
       position: fixed;
-      z-index: 5;
+      z-index: 21;
       right: 1rem;
       top: 1rem;
       transition: transform 0.4s ${({ theme }) => theme?.transition};

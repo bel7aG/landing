@@ -2,7 +2,7 @@ import { styled } from 'shared'
 import { SCREEN } from 'constant'
 
 export const SCover = styled.div`
-  z-index: 20;
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
