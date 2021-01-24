@@ -88,6 +88,7 @@ export const SNavigation = styled.nav<NavigationProps>`
       transition: opacity ${({ isOpen }) => (isOpen ? '0.8s 0.8s' : '0.4s 0s')} ${({ theme }) => theme?.transition};
 
       > li {
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
